@@ -1,0 +1,71 @@
+@model ProductListViewModel
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Admin Products</h1>
+        <hr>
+        <div href="/admin/products/create" class="btn btn-primary btn-sm">Ürün Ekle</div>
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <td style="width:30px;">Id</td>
+                    <td style="width:100px;">Resim Url</td>
+                    <td>Ad</td>
+                    <td style="width:100px;">Fiyat</td>
+                    <td style="width:25px;">Anasayfa</td>
+                    <td style="width:25px;">Onaylı</td>
+                    <td style="width:150px;"></td>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Products.Count() > 0)
+                {
+                    @foreach (var product in Model.Products)
+                    {
+                        <tr>
+                            <td>@product.ProductId</td>
+                            <td><img src="~/img/@product.ImageUrl" width="80px;"></td>
+                            <td>@product.Name</td>
+                            <td>@product.Price</td>
+                            <td>
+                                @if (product.IsHome)
+                                {
+                                    <i class="fas fa-check-circle" style="color:green;"></i>
+                                }
+                                else
+                                {
+                                    <i class="fas fa-times-circle" style="color:red;"></i>
+                                }
+                            </td>
+                            <td>
+                                @if (product.IsApproved)
+                                {
+                                    <i class="fas fa-check-circle" style="color:green;"></i>
+                                }
+                                else
+                                {
+                                    <i class="fas fa-times-circle" style="color:red;"></i>
+                                }
+                            </td>
+                            <td>
+                                <a href="~/admin/products/@product.ProductId" class="btn btn-primary btn-sm mr-2">Düzenle</a>
+                                <form action="~/admin/deleteproduct" method="POST" style="display: inline;">
+                                    <input type="hidden" name="ProductId" value="@product.ProductId">
+                                    <button type="submit" class="btn btn-danger btn-sm">Sil</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <div class="alert alert-warning">
+                        <h3>Ürün yok!</h3>
+                    </div>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>

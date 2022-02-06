@@ -1,0 +1,19 @@
+<div class="navbar bg-primary navbar-dark navbar-expand-sm">
+    <div class="container">
+        <a href="/" class="navbar-brand">Shopapp</a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a href="~/products" class="nav-link">Ürünler</a></li>
+            <li class="nav-item"><a asp-controller="shop" asp-action="list" class="nav-link">Kart</a></li>
+            <li class="nav-item"><a asp-controller="shop" asp-action="list" class="nav-link">Siparişler</a></li>
+            <li class="nav-item"><a asp-controller="admin" asp-action="createproduct" class="nav-link">Ürün ekle</a>
+            <li class="nav-item"><a asp-controller="admin" asp-action="categorylist" class="nav-link">Kategori
+                    ekle</a>
+            <li class="nav-item"><a asp-controller="admin" asp-action="products" class="nav-link">Ürünler</a>
+                @* <li class="nav-item"><a href="~/admin/products" class="nav-link">Ürünler</a> *@
+                @* bu da olabilir *@
+            </li>
+        </ul>
+
+
+    </div>
+</div>

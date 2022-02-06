@@ -1,0 +1,65 @@
+@model Product
+
+
+
+@* tekrar göndermesin diye action yapmadık! *@
+<form method="POST">
+
+    @* ANNOTATİON İLE İLGİLİ *@
+    <div asp-validation-summary="All" class="text-danger"></div>
+    @* action="product/create" veya action="product/addproduct" gibi farklı metodlar tanımlayabiliriz ama
+        tanımlamadığımızda default olarak zaten action="product/create" oluyor (productcontroller->[httppost] create metodu)
+    *@
+    <div class="form-group">
+        <label for="Name">Ürün Adı:</label>
+        @* <input type="text" name="Name" class="form-control"> *@
+        <input asp-for="Name" value="@Model.Name" class="form-control">
+        @* bu Name bilgisi product içerisine alınacak *@
+        @* ASP FORLARDA YANLIŞ YAZARSAK HATA GELİR O YÜZDEN DAHA KONTROLLÜDÜR *@
+
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="Price">Ürün Fiyatı:</label>
+        @* <input type="text" name="Price" class="form-control"> *@
+        <input asp-for="Price" value="@Model.Price" class="form-control">
+
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="Description">Ürün Açıklaması:</label>
+        @* <textarea name="Description" class="form-control"></textarea> *@
+        <textarea asp-for="Description" value="@Model.Description" class="form-control"></textarea>
+
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="ImageUrl">Ürün Resmi:</label>
+        @* <input type="text" name="ImageUrl" class="form-control"> *@
+        <input asp-for="ImageUrl" value="@Model.ImageUrl" class="form-control">
+
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+    </div>
+    @* <div class="form-group">
+        <label for="CategoryId">Ürün Kategorisi:</label>*@
+    @* <input type="text" name="CategoryId" class="form-control"> *@
+    @* <input asp-for="CategoryId" class="form-control"> *@
+    @*<select asp-for="CategoryId" asp-items="@ViewBag.Categories" class="form-control">
+        <option selected disabled>Seçiniz</option>*@
+
+    @* <option value="1">Telefon</option>
+        <option value="2">Bilgisayar</option>
+        <option value="3">Elektronik</option> *@
+
+
+
+    @* </select>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div> *@
+    <div class="form-group">
+        <label for="IsApproved">Onayla</label>
+        @* <input type="text" name="CategoryId" class="form-control"> *@
+        <input asp-for="IsApproved" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Gönder</button>
+</form>

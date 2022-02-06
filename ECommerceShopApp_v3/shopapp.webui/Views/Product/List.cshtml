@@ -1,0 +1,67 @@
+<!--  model List<Product> -->
+<!-- geri döndüren değer neyse o yazılmalı -->
+
+@model ProductListViewModel
+
+
+@* @{
+    Layout = "_Layout";
+    } *@
+@* viewstart.cshtml ekledik default tanımlandı zaten *@
+
+
+@*server tagı oluyor*@
+@{
+    var popularClass = Model.Products.Count > 2 ? "popular" : "";
+    var products = Model;
+    @* var categoryName = Model.Category.Name; *@
+    @* var categories = Model.Categories; *@
+}
+
+@section Categories{
+
+@await Component.InvokeAsync("Categories")
+
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="row">
+            <div class="col-md-12">
+            </div>
+        </div>
+
+        @* @await Html.PartialAsync("_categories",categories) *@
+        @* @await Component.InvokeAsync("Categories") *@
+
+
+    </div>
+    <div class="col-md-12">
+        @if (products.Products.Count == 0)
+        {
+            @await Html.PartialAsync("_noproduct")
+        }
+        else
+        {
+
+            <div class="row">
+
+
+                @foreach (var product in Model.Products)
+                {
+                    if (!product.IsApproved)
+                    {
+                        continue;
+                    }
+
+                    <div class="col-md-3">
+
+                        @await Html.PartialAsync("_product",product)
+                    </div>
+                }
+
+            </div>
+
+        }
+    </div>
+</div>

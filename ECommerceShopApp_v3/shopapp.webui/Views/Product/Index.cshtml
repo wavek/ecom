@@ -1,0 +1,42 @@
+@{
+    Layout = "_Layout";
+}
+
+
+<div class="row">
+    <div class="col-md-3">
+        @await Component.InvokeAsync("Categories")
+    </div>
+    <div class="col-md-9">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quasi, unde itaque iusto vero reprehenderit
+
+    </div>
+</div>
+
+
+
+
+@* @model Product
+    <!--viewimporta tanımladığımız için görüyor zaten-->
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product</title>
+    </head>
+
+    <body>
+    @await Html.PartialAsync("_navbar")
+    <h1>@ViewData["Category"]</h1>
+    <h4>@(((Product)ViewData["Product"]).Name)</h4>
+    <h4>@(((Product)ViewData["Product"]).Price)</h4>
+    <h4>@(((Product)ViewData["Product"]).Description)</h4>
+
+    <p>@Model.Description</p>
+    </body>
+
+    </html> *@

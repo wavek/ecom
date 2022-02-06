@@ -1,0 +1,14 @@
+C:\Users\Asus\Desktop\ECommerceShopApp\shopapp.business\bin\Debug\netstandard2.0\shopapp.business.deps.json
+C:\Users\Asus\Desktop\ECommerceShopApp\shopapp.business\bin\Debug\netstandard2.0\shopapp.business.dll
+C:\Users\Asus\Desktop\ECommerceShopApp\shopapp.business\bin\Debug\netstandard2.0\shopapp.business.pdb
+C:\Users\Asus\Desktop\ECommerceShopApp\shopapp.business\bin\Debug\netstandard2.0\shopapp.data.dll
+C:\Users\Asus\Desktop\ECommerceShopApp\shopapp.business\bin\Debug\netstandard2.0\shopapp.entity.dll
+C:\Users\Asus\Desktop\ECommerceShopApp\shopapp.business\bin\Debug\netstandard2.0\shopapp.entity.pdb
+C:\Users\Asus\Desktop\ECommerceShopApp\shopapp.business\bin\Debug\netstandard2.0\shopapp.data.pdb
+C:\Users\Asus\Desktop\ECommerceShopApp\shopapp.business\obj\Debug\netstandard2.0\shopapp.business.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\ECommerceShopApp\shopapp.business\obj\Debug\netstandard2.0\shopapp.business.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\ECommerceShopApp\shopapp.business\obj\Debug\netstandard2.0\shopapp.business.AssemblyInfo.cs
+C:\Users\Asus\Desktop\ECommerceShopApp\shopapp.business\obj\Debug\netstandard2.0\shopapp.business.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\ECommerceShopApp\shopapp.business\obj\Debug\netstandard2.0\shopapp.business.csproj.CopyComplete
+C:\Users\Asus\Desktop\ECommerceShopApp\shopapp.business\obj\Debug\netstandard2.0\shopapp.business.dll
+C:\Users\Asus\Desktop\ECommerceShopApp\shopapp.business\obj\Debug\netstandard2.0\shopapp.business.pdb
